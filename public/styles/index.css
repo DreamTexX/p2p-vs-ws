@@ -12,7 +12,7 @@ body {
     background-color:rgba(0,0,0,0.9);
 }
 
-a:link {
+a {
     color:rgb(0, 252, 252);
     text-decoration: none;
     background-color: rgba(0, 134, 134, 0.5);
