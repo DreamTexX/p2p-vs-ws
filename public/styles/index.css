@@ -1,0 +1,8 @@
+.application-choose {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+body {
+    background-color:rgba(0,0,0,0.9);
+}
