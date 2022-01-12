@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/p2p.css">
+    <title>Document</title>
+
+    <script src="javascript/signal-server.js"></script>
+    <script src="javascript/username.js"></script>
+    <script src="javascript/chat.js"></script>
+    <script src="javascript/p2p.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="main-headline">WebRTC - Realtime Chat Application</H1>
+    </header>
+
+    <div class="controls">
+        <button onclick="changeUsername(true)">Change your Username</button>
+        <input type="text" id="remote-username" placeholder="Remote Username">
+        <button onclick="connectP2p()">Connect with remote user</button>
+    </div>
+    <div class="chat">
+        <div id="chat-frame"></div>
+        <div class="chat-input-frame">
+            <input type="text" id="chat-input"><button onclick="sendChat()">Send</button>
+        </div>
+    </div>
+</body>
+</html>
