@@ -17,6 +17,6 @@ app.ws("/ws", (socket) => {
     handle(socket);
 });
 app.use(express.static("public"))
-app.listen(8083, "0.0.0.0", () => {
+app.listen(process.env.PORT || 8083, "0.0.0.0", () => {
     console.log("Server is running");
 })
