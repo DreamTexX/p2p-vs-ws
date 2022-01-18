@@ -3,11 +3,6 @@ window.addEventListener("load", () => {
         iceServers: [
             {
                 urls: "stun:stun3.l.google.com:19302"
-            },
-            {
-                urls: "turn:webrtc-demo.dreamtexx.fun:3478?transport=tcp",
-                username: "admin",
-                credential: "admin"
             }
         ]
     })
@@ -62,9 +57,6 @@ function sendChat() {
 }
 
 async function onOffer(data) {
-    if (data["to"] !== window.username)
-        return;
-
     if (!window.confirm(`${data["from"]} wants to establish a connection with you. Accept?`)) {
         return;
     }
