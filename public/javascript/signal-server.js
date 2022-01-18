@@ -1,7 +1,8 @@
 window.signalServer = new WebSocket(`${window.location.protocol.startsWith("https") ? "wss" : "ws"}://${window.location.hostname}:${window.location.port}/p2p`);
 window.signalServer.onmessage = async (message) => {
     const data = JSON.parse(message.data);
-    if (data["from"] === window.username) return;
+    if (data.data["from"] === window.username) return;
+    if (data.data["to"] !== window.username) return;
 
     switch (data.type) {
         case "offer":
