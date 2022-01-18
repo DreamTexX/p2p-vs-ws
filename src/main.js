@@ -6,7 +6,7 @@ import {handle as handleP2P} from "./p2p.js";
 const app = express();
 const wsInstance = enableWs(app)
 
-app.ws("/p2p", (socket, req) => {
+app.ws("/p2p", (socket) => {
     handleP2P(socket, wsInstance);
 })
 app.ws("/ws", (socket) => {
