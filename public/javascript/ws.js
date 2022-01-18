@@ -1,7 +1,7 @@
 window.resolvers = new Map();
 
 function init() {
-    window.wsServer = new WebSocket(`ws://${window.location.hostname}:${window.location.port}/ws`);
+    window.wsServer = new WebSocket(`${window.location.protocol.startsWith("https") ? "wss" : "ws"}://${window.location.hostname}:${window.location.port}/ws`);
     window.wsServer.onmessage = async (message) => {
         const data = JSON.parse(message.data);
         if (data["from"] === window.username) return;

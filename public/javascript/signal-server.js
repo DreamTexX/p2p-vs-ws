@@ -1,4 +1,4 @@
-window.signalServer = new WebSocket(`ws://${window.location.hostname}:${window.location.port}/p2p`);
+window.signalServer = new WebSocket(`${window.location.protocol.startsWith("https") ? "wss" : "ws"}://${window.location.hostname}:${window.location.port}/p2p`);
 window.signalServer.onmessage = async (message) => {
     const data = JSON.parse(message.data);
     if (data["from"] === window.username) return;
