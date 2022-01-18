@@ -5,9 +5,8 @@ window.addEventListener("load", () => {
                 urls: "stun:stun3.l.google.com:19302"
             },
             {
-                urls: "turn:webrtc-demo.dreamtexx.fun:3478",
+                urls: "turn:webrtc-demo.dreamtexx.fun:3478?transport=tcp",
                 username: "admin",
-                credentialType: "password",
                 credential: "admin"
             }
         ]
